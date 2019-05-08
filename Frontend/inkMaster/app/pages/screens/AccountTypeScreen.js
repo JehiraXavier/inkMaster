@@ -1,16 +1,16 @@
 import React, { Component } from "react";
 import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
 
-import AsyncStorage from "@react-native-community/async-storage";
+// import AsyncStorage from "@react-native-community/async-storage";
 
 export default class Home extends React.Component {
-  static navigationOptions = {
-    title: "Choose an account to continue!",
-    headerStyle: {
-      backgroundColor: "#000000"
-    },
-    headerTintColor: "#ffffff"
-  };
+  // static navigationOptions = {
+  //   title: "Choose an account to continue!",
+  //   headerStyle: {
+  //     backgroundColor: "#000000"
+  //   },
+  //   headerTintColor: "#ffffff"
+  // };
 
   render() {
     return (
@@ -25,8 +25,8 @@ export default class Home extends React.Component {
               Choose
             </Text>
           </TouchableOpacity>
-        </View>
-        <View style={styles.container}>
+          {/* </View>
+        <View style={styles.container}> */}
           <Text style={styles.primaryText}>I'm a tattoo artist</Text>
           <Text style={styles.secondaryText}>
             Showcase your art and get bookings from clients
@@ -41,15 +41,15 @@ export default class Home extends React.Component {
     );
   }
 
-  _showSignInArtist = async () => {
-    await AsyncStorage.setItem("AccountType", "Artist");
-    this.props.navigation.navigate("SignIn", { type: "Artist" });
-  };
+  // _showSignInArtist = async () => {
+  //   await AsyncStorage.setItem("AccountType", "Artist");
+  //   this.props.navigation.navigate("SignIn", { type: "Artist" });
+  // };
 
-  _showSignInCustomer = async () => {
-    await AsyncStorage.setItem("AccountType", "Customer");
-    this.props.navigation.navigate("SignIn", { type: "Customer" });
-  };
+  // _showSignInCustomer = async () => {
+  //   await AsyncStorage.setItem("AccountType", "Customer");
+  //   this.props.navigation.navigate("SignIn", { type: "Customer" });
+  // };
 }
 
 const styles = StyleSheet.create({
@@ -57,7 +57,8 @@ const styles = StyleSheet.create({
     flexGrow: 1,
     backgroundColor: "#EBEDEF",
     alignItems: "center",
-    justifyContent: "center"
+    justifyContent: "center",
+    height: "100%"
   },
   primaryText: {
     fontSize: 25,
