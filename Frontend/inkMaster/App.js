@@ -9,13 +9,13 @@
 import React, { Component } from "react";
 import { Platform, StyleSheet, Text, View } from "react-native";
 
-import AccountTypeScreen from "./app/pages/screens/AccountTypeScreen";
+import SigninScreen from "./app/pages/screens/SigninScreen";
 
 export default class App extends Component {
   render() {
     return (
       <View>
-        <AccountTypeScreen />
+        <SigninScreen />
       </View>
     );
   }
