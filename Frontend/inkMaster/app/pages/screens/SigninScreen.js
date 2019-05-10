@@ -7,16 +7,69 @@ import {
   TouchableOpacity
 } from "react-native";
 
+// import AsyncStorage from "@react-native-community/async-storage";
+
+// import firebase from 'firebase';
+
 import Logo from "inkMaster/app/components/Logo.js";
 
+// import { createStackNavigator, createAppContainer } from "react-navigation";
+
 export default class SigninScreen extends React.Component {
+  // static navigationOptions = {
+  //   title: "Welcome to inkMaster",
+  //   headerStyle: {
+  //     backgroundColor: "#000000"
+  //   },
+  //   headerTintColor: "#ffffff"
+  // };
+
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     emailText: "",
+  //     passwordText: "",
+  //     loading: false,
+  //     isLoggedIn: false,
+  //     errorText: ""
+  //   };
+  //   this._signIn = this._signIn.bind(this);
+  //   // const params = this.props.navigation.state.params;
+  //   const navigation = this.props.navigation;
+  // }
+
+  // static navigationOptions = ({ navigation }) => {
+  //   return {
+  //     title: navigation.getParam('type', 'DEFAULT_TYPE'),
+  //   };
+  // };
+
+  // componentWillMount() {
+  //   var config = {
+  //     apiKey: "AIzaSyAtJYvnYTKS4FQaI309LSHwOXfKu6ZnplE",
+  //     authDomain: "inkmastertattooapp.firebaseapp.com",
+  //     databaseURL: "https://inkmastertattooapp.firebaseio.com",
+  //     projectId: "inkmastertattooapp",
+  //     storageBucket: "inkmastertattooapp.appspot.com",
+  //     messagingSenderId: "211941742756"
+  //   };
+  //   firebase.initializeApp(config);
+  //   firebase.auth().onAuthStateChanged(user=>{
+  //       if(user) {
+  //         this.setState({isLoggedIn: !this.state.isLoggedIn})
+  //       } else {
+  //         this.setState({isLoggedIn: false})
+  //       }
+  //   })
+  // }
+
   render() {
     return (
       <View style={styles.container}>
         <Logo />
         <TextInput
           style={styles.inputBox}
-          placeholder="Enter email"
+          placeholder="Email"
           placeholderTextColor="rgba(0,0,0,0.7)"
           keyboardType="email-address"
           returnKeyType="next"
@@ -25,7 +78,7 @@ export default class SigninScreen extends React.Component {
         />
         <TextInput
           style={styles.inputBox}
-          placeholder="Enter password"
+          placeholder="Password"
           placeholderTextColor="rgba(0,0,0,0.7)"
           keyboardType="default"
           returnKeyType="go"
@@ -45,6 +98,49 @@ export default class SigninScreen extends React.Component {
       </View>
     );
   }
+
+  // _signIn() {
+  //   this.setState({ loading: true });
+  //   const { emailText, passwordText } = this.state;
+  //   firebase
+  //     .auth()
+  //     .signInWithEmailAndPassword(emailText, passwordText)
+  //     .then(
+  //       this.setState({
+  //         errorText: "Success",
+  //         loading: false,
+  //         emailText: "",
+  //         passwordText: ""
+  //         // if (params.type == 'Artist')
+  //         //     navigation.navigate('ArtistApp')
+  //         // else if (params.type == 'Customer')
+  //         //   navigation.navigate('CustomerApp')
+  //       })
+  //       // _signInNavigate();
+  //     )
+  //     .catch(
+  //       this.setState({
+  //         errorText: "Authentication failed",
+  //         loading: false,
+  //         emailText: "",
+  //         passwordText: ""
+  //       })
+  //     );
+
+  //   const params = this.props.navigation.state.params;
+  //   if (params.type == "Artist") this.props.navigation.navigate("ArtistApp");
+  //   else if (params.type == "Customer")
+  //     this.props.navigation.navigate("CustomerApp");
+  // }
+
+  // _signInNavigate() {
+  //   if (params.type == "Artist") navigation.navigate("ArtistApp");
+  //   else if (params.type == "Customer") navigation.navigate("CustomerApp");
+  // }
+
+  // _showSignUp = () => {
+  //   this.props.navigation.navigate("SignUp");
+  // };
 }
 
 const styles = StyleSheet.create({
