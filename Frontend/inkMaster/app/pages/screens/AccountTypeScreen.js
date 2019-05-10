@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
 
 // import AsyncStorage from "@react-native-community/async-storage";
 
-export default class Home extends React.Component {
+export default class AccountTypeScreen extends React.Component {
   // static navigationOptions = {
   //   title: "Choose an account to continue!",
   //   headerStyle: {
@@ -63,7 +63,7 @@ const styles = StyleSheet.create({
   primaryText: {
     fontSize: 25,
     fontWeight: "400",
-    fontFamily: "sans-serif-thin",
+    fontFamily: "sans-serif",
     color: "black",
     textAlign: "center",
     paddingTop: 18
