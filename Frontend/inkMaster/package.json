@@ -12,6 +12,8 @@
     "react-native": "^0.59.8",
     "react-native-24h-timepicker": "^1.0.0",
     "react-native-datepicker": "^1.7.2",
+    "react-native-gesture-handler": "^1.2.1",
+    "react-navigation": "^3.9.1",
     "save": "^2.3.3"
   },
   "devDependencies": {
